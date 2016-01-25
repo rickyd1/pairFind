@@ -130,12 +130,12 @@ function update() {
     }
     scoreText.x = game.camera.x + _W - scoreText.width - 10;
     scoreText.y = game.camera.y + 10;     
-    if (score > 5 )   {
-        gameLevel = 2;
+    if (score > 15 )   {
+        gameLevel = 4;
     } else if (score > 10) {
         gameLevel = 3;
-    } else if (score > 15) {
-        gameLevel = 4;
+    } else if (score > 5) {
+        gameLevel = 2;
     }
     else {
         gameLevel = 1;
