@@ -150,7 +150,6 @@ function render() {
 }
 function updateTimer() {
   gameTimer -= 1;
-  console.log(gameTimer);
   if(gameTimer === 0) {
     //To remove event:
     game.time.events.remove(timerEvent);
@@ -170,7 +169,6 @@ function reloadIcons() {
     pairStatus = 0;
     score = score + 1;
     gameTimer += 5;
-    console.log('Score is ' + score);
     scoreText.setText("Score: " + score);
     gobble.play();
     
@@ -215,31 +213,24 @@ function reloadIcons() {
     fadeInLady.start();
 }
 function listener(target) {
-    console.log('supa');
-    console.log(target.name);
     var itemName = target.name;
     target.alpha = 1;
-    console.log(itemName);
     if (itemName == 'male') {
         horse.play();
         fadeAwayMale.start();
         gameTimer += 5;
-        console.log(pairStatus);
         if (pairStatus == 0 ) {
             pairStatus = 1;
         } else {
-            console.log('split it'); 
             setTimeout(reloadIcons, 500);   
         }
     } else if (itemName == 'female') {
         sugar.play();
         fadeAwayLady.start();
-        console.log(pairStatus);
         gameTimer += 5;
         if (pairStatus == 0 ) {
             pairStatus = 1;
         } else {   
-            console.log('doing it');
             setTimeout(reloadIcons, 500);           
         }
     }
