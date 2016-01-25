@@ -194,8 +194,8 @@ function reloadIcons() {
         // grass only 
         Xval = Math.floor(Math.random() * canvas_W) + 1 ;
         XaltVal = Math.floor(Math.random() * canvas_W) + 1; 
-        YaltVal = canvas_H - Math.floor(Math.random() * canvas_H/2);
-        Yval = canvas_H - Math.floor(Math.random() * canvas_H/2);
+        YaltVal = canvas_H - Math.floor(Math.random() * canvas_H/2) - 30;
+        Yval = canvas_H - Math.floor(Math.random() * canvas_H/2) - 30;
     } else {
         Xval = Math.floor(Math.random() * canvas_W) + 1 ;
         XaltVal = Math.floor(Math.random() * canvas_W) + 1;    
